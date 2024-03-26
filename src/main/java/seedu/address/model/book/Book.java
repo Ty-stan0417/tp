@@ -29,12 +29,25 @@ public class Book {
 
     }
 
+    public String getBookTitle() {
+        return this.bookTitle;
+    }
+
     /**
      * Returns true if a given string is a valid book title.
      * Empty titles or titles that are not blank are valid.
      */
     public static boolean isValidBookTitle(String test) {
         return test.matches(VALIDATION_REGEX);
+    }
+
+    public boolean isSameBook(Book otherBook) {
+        if (otherBook == this) {
+            return true;
+        }
+
+        return otherBook != null
+                && otherBook.getBookTitle().equals(this.getBookTitle());
     }
 
     @Override

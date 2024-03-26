@@ -8,6 +8,7 @@ import java.util.logging.Logger;
 import seedu.address.commons.core.LogsCenter;
 import seedu.address.commons.exceptions.DataLoadingException;
 import seedu.address.model.ReadOnlyAddressBook;
+import seedu.address.model.ReadOnlyLibrary;
 import seedu.address.model.ReadOnlyUserPrefs;
 import seedu.address.model.UserPrefs;
 
@@ -19,13 +20,15 @@ public class StorageManager implements Storage {
     private static final Logger logger = LogsCenter.getLogger(StorageManager.class);
     private AddressBookStorage addressBookStorage;
     private UserPrefsStorage userPrefsStorage;
+    private LibraryStorage libraryStorage;
 
     /**
      * Creates a {@code StorageManager} with the given {@code AddressBookStorage} and {@code UserPrefStorage}.
      */
-    public StorageManager(AddressBookStorage addressBookStorage, UserPrefsStorage userPrefsStorage) {
+    public StorageManager(AddressBookStorage addressBookStorage, UserPrefsStorage userPrefsStorage, LibraryStorage libraryStorage) {
         this.addressBookStorage = addressBookStorage;
         this.userPrefsStorage = userPrefsStorage;
+        this.libraryStorage = libraryStorage;
     }
 
     // ================ UserPrefs methods ==============================
@@ -54,6 +57,11 @@ public class StorageManager implements Storage {
     }
 
     @Override
+    public Path getLibraryFilePath() {
+        return libraryStorage.getLibraryFilePath();
+    }
+
+    @Override
     public Optional<ReadOnlyAddressBook> readAddressBook() throws DataLoadingException {
         return readAddressBook(addressBookStorage.getAddressBookFilePath());
     }
@@ -73,6 +81,28 @@ public class StorageManager implements Storage {
     public void saveAddressBook(ReadOnlyAddressBook addressBook, Path filePath) throws IOException {
         logger.fine("Attempting to write to data file: " + filePath);
         addressBookStorage.saveAddressBook(addressBook, filePath);
+    }
+
+    @Override
+    public Optional<ReadOnlyLibrary> readLibrary() throws DataLoadingException {
+        return readLibrary(libraryStorage.getLibraryFilePath());
+    }
+
+    @Override
+    public Optional<ReadOnlyLibrary> readLibrary(Path filePath) throws DataLoadingException {
+        logger.fine("Attempting to read data from file: " + filePath);
+        return libraryStorage.readLibrary(filePath);
+    }
+
+    @Override
+    public void saveLibrary(ReadOnlyLibrary library) throws IOException {
+        saveLibrary(library, libraryStorage.getLibraryFilePath());
+    }
+
+    @Override
+    public void saveLibrary(ReadOnlyLibrary library, Path filePath) throws IOException {
+        logger.fine("Attempting to write to data file: " + filePath);
+        libraryStorage.saveLibrary(library, filePath);
     }
 
 }
