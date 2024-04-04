@@ -122,6 +122,8 @@
         "borrow-a-book-by-a-user-borrow": "Borrow a book by a user: borrow",
         "return-a-book-from-a-user-return": "Return a book from a user : return",
         "donate-a-book-from-a-user-donate": "Donate a book from a user : donate",
+        "add-a-book-to-library-addbook": "Add a book to Library : addbook",
+        "delete-a-book-from-library-addbook": "Delete a book from Library : addbook",
         "setting-viewing-the-limit-for-the-library": "Setting/Viewing the limit for the library",
         "clearing-all-entries-clear": "Clearing all entries : clear",
         "exiting-the-program-exit": "Exiting the program : exit",
