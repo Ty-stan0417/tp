@@ -141,7 +141,10 @@
       "src": "index.md",
       "title": "",
       "headings": {
-        "addressbook-level-3": "AddressBook Level-3"
+        "about-mybookshelf": "About MyBookshelf",
+        "about-mybookshelf-2": "About MyBookshelf",
+        "project-details": "Project Details",
+        "acknowledgement": "Acknowledgement"
       },
       "headingKeywords": {}
     },
