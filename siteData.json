@@ -40,7 +40,7 @@
       "src": "DeveloperGuide.md",
       "title": "Developer Guide",
       "headings": {
-        "ab-3-developer-guide": "AB-3 Developer Guide",
+        "mybookshelf-developer-guide": "MyBookshelf Developer Guide",
         "acknowledgements": "Acknowledgements",
         "setting-up-getting-started": "Setting up, getting started",
         "design": "Design",
@@ -136,6 +136,7 @@
         "note": "Note",
         "future-features": "Future Features",
         "introducing-more-flexibility-for-clear": "Introducing more flexibility for clear",
+        "introducing-unique-id-for-books": "Introducing unique id for books",
         "archiving-data-files": "Archiving data files",
         "details-coming-soon": "Details coming soon...",
         "faq": "FAQ",
