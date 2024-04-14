@@ -66,7 +66,10 @@
         "appendix-instructions-for-manual-testing": "Appendix: Instructions for manual testing",
         "launch-and-shutdown": "Launch and shutdown",
         "deleting-a-person": "Deleting a person",
-        "saving-data": "Saving data"
+        "saving-data": "Saving data",
+        "donate-a-book": "Donate a book",
+        "borrow-a-book": "Borrow a book",
+        "return-a-book": "Return a book"
       },
       "headingKeywords": {}
     },
@@ -112,6 +115,9 @@
       "headings": {
         "mybookshelf-user-guide": "MyBookshelf User Guide",
         "quick-start": "Quick start",
+        "a-quick-walkthrough-of-mybookshelf": "A Quick Walkthrough of MyBookshelf",
+        "overview": "Overview:",
+        "library-user-information": "Library User Information:",
         "features": "Features",
         "notes-about-the-command-format": "Notes about the command format:",
         "notes-about-the-parameters-used": "Notes about the parameters used:",
@@ -132,7 +138,7 @@
         "exiting-the-program-exit": "Exiting the program : exit",
         "saving-the-data": "Saving the data",
         "editing-the-data-file": "Editing the data file",
-        "note": "Note",
+        "things-to-note": "Things to Note",
         "future-features": "Future Features",
         "introducing-more-flexibility-for-clear": "Introducing more flexibility for clear",
         "introducing-the-findbook-command": "Introducing the findbook command",
