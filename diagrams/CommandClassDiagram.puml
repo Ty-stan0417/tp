@@ -1,0 +1,40 @@
+@startuml
+!include style.puml
+skinparam arrowThickness 1.1
+skinparam arrowColor LOGIC_COLOR_T4
+skinparam classBackgroundColor LOGIC_COLOR
+
+top to bottom direction
+
+Class "{abstract}\nCommand" as Command
+Class AddBookCommand
+Class AddCommand
+Class BorrowCommand
+Class ClearCommand
+Class DeleteBookCommand
+Class DeleteCommand
+Class DonateCommand
+Class EditCommand
+Class ExitCommand
+Class FindCommand
+Class HelpCommand
+Class LimitCommand
+Class ListCommand
+Class ReturnCommand
+
+AddBookCommand -down-|> Command
+AddCommand -down-|> Command
+BorrowCommand -down-|> Command
+ClearCommand -down-|> Command
+DeleteBookCommand -left-|> Command
+DeleteCommand -left-|> Command
+DonateCommand -left-|> Command
+EditCommand -right-|> Command
+ExitCommand -right-|> Command
+FindCommand -right-|> Command
+HelpCommand -up-|> Command
+LimitCommand -up-|> Command
+ListCommand -up-|> Command
+ReturnCommand -up-|> Command
+
+@enduml

@@ -20,9 +20,6 @@ Person *--> Email
 Person *--> Address
 
 Person *--> MeritScore
-Person *--> BookList
+Person *--> "*" Book
 
-BookList --> Book
-
-Book *--> BookTitle
 @enduml

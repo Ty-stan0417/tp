@@ -66,10 +66,14 @@
         "appendix-instructions-for-manual-testing": "Appendix: Instructions for manual testing",
         "launch-and-shutdown": "Launch and shutdown",
         "deleting-a-person": "Deleting a person",
-        "saving-data": "Saving data",
+        "add-a-book-into-the-library-book-list": "Add a book into the library book list",
+        "delete-a-book-from-the-library-book-list": "Delete a book from the library book list",
+        "check-the-current-threshold-of-the-library": "Check the current threshold of the library",
+        "set-a-new-threshold-to-the-library": "Set a new threshold to the library",
         "donate-a-book": "Donate a book",
         "borrow-a-book": "Borrow a book",
-        "return-a-book": "Return a book"
+        "return-a-book": "Return a book",
+        "saving-data": "Saving data"
       },
       "headingKeywords": {}
     },
