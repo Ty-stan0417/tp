@@ -1,0 +1,28 @@
+@startuml
+!include style.puml
+skinparam arrowThickness 1.1
+skinparam arrowColor MODEL_COLOR
+skinparam classBackgroundColor MODEL_COLOR
+
+Class I #FFFFFF
+Class J #FFFFFF
+
+AddressBook *-down-> "1" UniquePersonList
+
+UniquePersonList -down-> Person
+
+Person *--> Name
+Person *--> Phone
+Person *--> Email
+Person *--> Address
+Person --> "*" Tag
+Person *--> MeritScore
+Person *--> "*" Book
+
+Person -[hidden]right-> I
+I -[hidden]right-> J
+J -[hidden]right-> Library
+Library *-down-> "*" Book
+Library *--> Threshold
+
+@enduml

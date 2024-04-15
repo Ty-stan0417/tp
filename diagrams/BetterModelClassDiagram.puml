@@ -4,13 +4,19 @@ skinparam arrowThickness 1.1
 skinparam arrowColor MODEL_COLOR
 skinparam classBackgroundColor MODEL_COLOR
 
+Class I #FFFFFF
+
 AddressBook *-right-> "1" UniquePersonList
 AddressBook *-right-> "1" UniqueTagList
 UniqueTagList -[hidden]down- UniquePersonList
 UniqueTagList -[hidden]down- UniquePersonList
 
 UniqueTagList -right-> "*" Tag
-UniquePersonList -right-> Person
+UniquePersonList -right-> "*" Person
+Library -down-> Book
+
+Library *-right-> "1" UniqueBookList
+UniqueBookList -down-> "*" Book
 
 Person -up-> "*" Tag
 
@@ -21,5 +27,7 @@ Person *--> Address
 
 Person *--> MeritScore
 Person *--> "*" Book
+MeritScore -[hidden]right-> Book
+Person -[hidden]right-> UniqueBookList
 
 @enduml
